@@ -1,0 +1,5 @@
+spring:
+  redis:
+    password: 051269pp
+server:
+  port: 8081
