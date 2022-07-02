@@ -12,9 +12,11 @@ jobs:
       - run: cd backend && mvn clean install
   compile-frontend:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
     steps:
       - uses: actions/checkout@v2
-      - run: cd frontend
       - uses: actions/setup-node@v3
         with:
           node-version: 14
