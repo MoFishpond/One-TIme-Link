@@ -1,4 +1,4 @@
-package com.gymhy.redistemplate.repository;
+package com.gymhy.onetimelink.repository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;

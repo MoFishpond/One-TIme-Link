@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:6.2-alpine
+    container_name: redis
+    hostname: redis
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass password
+  backend:
+    build: .
+    ports:
+      - "8081:8081"
+    links:
+      - redis
+    volumes:
+      - ./logs:/logs
+    environment:
+      REDIS_PASSWORD: password
+    depends_on:
+      - redis

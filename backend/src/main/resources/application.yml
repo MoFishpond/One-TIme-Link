@@ -1,5 +1,9 @@
 spring:
   redis:
-    password: 051269pp
+    password: ${REDIS_PASSWORD}
+    host: redis
 server:
   port: 8081
+logging:
+  file:
+    path: /logs/application-debug.log

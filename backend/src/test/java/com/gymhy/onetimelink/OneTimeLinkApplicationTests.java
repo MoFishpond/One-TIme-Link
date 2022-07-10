@@ -1,10 +1,10 @@
-package com.gymhy.redistemplate;
+package com.gymhy.onetimelink;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RedisTemplateApplicationTests {
+class OneTimeLinkApplicationTests {
 
     @Test
     void contextLoads() {

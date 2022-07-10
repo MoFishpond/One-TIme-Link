@@ -1,4 +1,4 @@
-package com.gymhy.redistemplate.entity;
+package com.gymhy.onetimelink.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class StoreRequest {
+public class QueryRequest {
 
-    private String content;
+    private String oneTimeURL;
 }

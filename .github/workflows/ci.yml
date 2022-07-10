@@ -10,6 +10,8 @@ jobs:
           distribution: 'adopt'
           java-version: '8'
       - run: cd backend && mvn clean install
+      - name: Test Docker Building
+        run: docker-compose up -d
   compile-frontend:
     runs-on: ubuntu-latest
     steps:
