@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
+if [[ -z "${BACKEND}" ]]
+then
+  echo "Need to set up BACKEND env first!"
+  exit 1
+fi
+
 if ! [ -x "$(command -v docker)" ]
 then
   echo "Set up docker..."
@@ -39,5 +45,5 @@ fi
 echo "Build project..."
 cd backend && mvn clean package && cd ..
 sudo docker-compose up -d
-cd frontend && npm install && npm install pm2 -g
-pm2 start npm -- start
+cd frontend && npm install
+REACT_APP_BACKEND_URL="$BACKEND" npm start
