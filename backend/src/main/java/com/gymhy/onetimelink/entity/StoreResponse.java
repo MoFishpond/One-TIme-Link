@@ -1,4 +1,4 @@
-package com.gymhy.redistemplate.entity;
+package com.gymhy.onetimelink.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,12 +1,9 @@
-package com.gymhy.redistemplate.domain;
+package com.gymhy.onetimelink.domain;
 
-import com.gymhy.redistemplate.entity.QueryRequest;
-import com.gymhy.redistemplate.repository.LinkStorage;
+import com.gymhy.onetimelink.repository.LinkStorage;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Locale;
 
 /**
  * @author gongyiming

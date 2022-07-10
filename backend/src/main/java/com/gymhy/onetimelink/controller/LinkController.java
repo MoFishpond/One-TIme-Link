@@ -1,10 +1,10 @@
-package com.gymhy.redistemplate.controller;
+package com.gymhy.onetimelink.controller;
 
-import com.gymhy.redistemplate.domain.LinkService;
-import com.gymhy.redistemplate.entity.QueryRequest;
-import com.gymhy.redistemplate.entity.QueryResponse;
-import com.gymhy.redistemplate.entity.StoreRequest;
-import com.gymhy.redistemplate.entity.StoreResponse;
+import com.gymhy.onetimelink.domain.LinkService;
+import com.gymhy.onetimelink.entity.QueryRequest;
+import com.gymhy.onetimelink.entity.QueryResponse;
+import com.gymhy.onetimelink.entity.StoreRequest;
+import com.gymhy.onetimelink.entity.StoreResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
