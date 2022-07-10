@@ -1,6 +1,7 @@
 spring:
   redis:
     password: ${REDIS_PASSWORD}
+    host: cache
 server:
   port: 8081
 logging:
