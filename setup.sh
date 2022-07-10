@@ -18,7 +18,7 @@ fi
 if ! [ -x "$(command -v java)" ]
 then
   echo "Set up Java8..."
-  sudo apt-get update && sudo apt-get upgrade
+  sudo apt-get update -y && sudo apt-get upgrade -y
   sudo apt-get openjdk-8-jdk -y
 fi
 
