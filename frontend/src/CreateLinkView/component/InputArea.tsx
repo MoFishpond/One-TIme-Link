@@ -2,6 +2,7 @@ import { Input, Button } from 'antd';
 import React from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
+import {BACKEND} from "../../constants.ts";
 
 const { TextArea } = Input;
 
@@ -23,7 +24,7 @@ export const InputArea: React.FC = () => {
 
   const submitContent = async () => {
     // navigate('/private/testurl')
-    const response = await axios.post('http://13.59.160.28:8081/generate', {
+    const response = await axios.post(BACKEND + '/generate', {
       content: content
     })
     console.log("submit")
