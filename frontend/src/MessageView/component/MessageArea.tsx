@@ -1,14 +1,15 @@
 import { Button } from 'antd';
 import React from 'react';
 import axios from 'axios';
-
+import {BACKEND} from "../../constants.ts";
 
 
 
 export const MessageArea: React.FC = () => {
   let [message, setMessage] = React.useState("")
   let [showMessage, setShowMessage] =  React.useState(false)
-  const path = window.location.pathname
+  const pathList = window.location.pathname.split('/')
+  const path = pathList[2]
   console.log(path)
   
   const handleViewMessage = async () => {
@@ -20,7 +21,7 @@ export const MessageArea: React.FC = () => {
     console.log("submit")
     // setMessage('pp')
     // setShowMessage(true)
-    const response = await axios.get('/query?oneTimeURL='+path)
+    const response = await axios.get(BACKEND + '/query?oneTimeURL='+path)
     const message = response.data.content
     setMessage(message)
     setShowMessage(true)

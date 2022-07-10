@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 set -e
 
+if [[ -z "${BACKEND}" ]]
+then
+  echo "Need to set up BACKEND env first!"
+  exit 1
+fi
+
 if ! [ -x "$(command -v docker)" ]
 then
   echo "Set up docker..."
@@ -30,6 +36,14 @@ then
   source setup_maven.sh
 fi
 
+if ! [ -x "$(command -v npm)" ]
+then
+  curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+  sudo apt-get install -y nodejs
+fi
+
 echo "Build project..."
 cd backend && mvn clean package && cd ..
 sudo docker-compose up -d
+cd frontend && npm install
+REACT_APP_BACKEND_URL="$BACKEND" npm start
