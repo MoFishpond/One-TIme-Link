@@ -22,13 +22,13 @@ export const InputArea: React.FC = () => {
   }
 
   const submitContent = async () => {
-    navigate('/private/testurl')
+    // navigate('/private/testurl')
     const response = await axios.post('/generate', {
       content: content
     })
     console.log("submit")
     const url = '/private/' + response.data.oneTimeURL
-    // navigate(url);
+    navigate(url);
   }
   return (
     <>
