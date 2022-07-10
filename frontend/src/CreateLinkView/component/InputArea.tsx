@@ -23,7 +23,7 @@ export const InputArea: React.FC = () => {
 
   const submitContent = async () => {
     // navigate('/private/testurl')
-    const response = await axios.post('/generate', {
+    const response = await axios.post('http://13.59.160.28:8081/generate', {
       content: content
     })
     console.log("submit")

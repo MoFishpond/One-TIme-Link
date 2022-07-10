@@ -20,7 +20,7 @@ export const MessageArea: React.FC = () => {
     console.log("submit")
     // setMessage('pp')
     // setShowMessage(true)
-    const response = await axios.get('/query?oneTimeURL='+path)
+    const response = await axios.get('http://13.59.160.28:8081/query?oneTimeURL='+path)
     const message = response.data.content
     setMessage(message)
     setShowMessage(true)
