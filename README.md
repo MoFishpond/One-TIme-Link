@@ -16,7 +16,7 @@ You need to open the port 8081, 6374 and 3000 in the inbound rules.
 In order to make the life easier, we create an installation script `setup.sh`.
 You can simply run this shell script the following and need to replace the `machine_ipv4` with the real ec2 ipv4.
 ```shell
-BACKEND="http://machine_ipv4:8081"
+export BACKEND="http://machine_ipv4:8081"
 ./setup.sh
 ```
 
